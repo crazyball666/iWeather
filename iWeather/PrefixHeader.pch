@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  iWeather
+//
+//  Created by efun on 2019/7/19.
+//  Copyright © 2019 EFN. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Networking.h"
+#import "AppColor.h"
+#import "UIView+SetRect.h"
+#import "FontInfomation.h"
+#import "AddedFont.h"
+#import "GCD.h"
+#import "YXEasing.h"
+#import "POP.h"
+#import "NSString+File.h"
+#import "SimpleNSLog.h"
+#endif
+
+#endif /* PrefixHeader_pch */
