@@ -1,8 +1,8 @@
 //
 //  UpdatingView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/28.
+//  Created by crazyball on 15/2/28.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -59,7 +59,7 @@
     self.label.textColor        = [UIColor whiteColor];
     self.label.textAlignment    = NSTextAlignmentCenter;
     self.label.font             = [UIFont fontWithName:LATO_LIGHT size:18.f];
-    self.label.text             = @"Updating . . .";
+    self.label.text             = @"Loading . . .";
     self.label.GCDTimerInterval = @(0.8f);
     self.label.glowDuration     = @(0.7f);
     self.label.glowLayerOpacity = @(1.f);

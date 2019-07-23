@@ -2,7 +2,7 @@
 //  ShapeWordView.m
 //  PathWord
 //
-//  Created by XianMingYou on 15/3/6.
+//  Created by crazyball on 15/3/6.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

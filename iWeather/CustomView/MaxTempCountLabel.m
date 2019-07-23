@@ -1,8 +1,8 @@
 //
 //  MaxTempCountLabel.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/20.
+//  Created by crazyball on 15/2/20.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

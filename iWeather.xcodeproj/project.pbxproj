@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CE0ABCF022E1A274008C4E2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABCEF22E1A274008C4E2F /* AppDelegate.m */; };
-		CE0ABCF322E1A274008C4E2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABCF222E1A274008C4E2F /* ViewController.m */; };
+		CE0ABCF322E1A274008C4E2F /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABCF222E1A274008C4E2F /* IndexViewController.m */; };
 		CE0ABCF822E1A276008C4E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0ABCF722E1A276008C4E2F /* Assets.xcassets */; };
 		CE0ABCFB22E1A276008C4E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0ABCF922E1A276008C4E2F /* LaunchScreen.storyboard */; };
 		CE0ABCFE22E1A276008C4E2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABCFD22E1A276008C4E2F /* main.m */; };
 		CE0ABD0D22E1A79C008C4E2F /* ForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD0922E1A79C008C4E2F /* ForecastController.m */; };
 		CE0ABD0E22E1A79C008C4E2F /* ForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD0C22E1A79C008C4E2F /* ForecastCell.m */; };
-		CE0ABF1822E1A7CB008C4E2F /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1122E1A7C8008C4E2F /* YXEasing.m */; };
-		CE0ABF1922E1A7CB008C4E2F /* Easing.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1222E1A7C8008C4E2F /* Easing.c */; };
 		CE0ABF1A22E1A7CB008C4E2F /* FontInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1522E1A7C8008C4E2F /* FontInfomation.m */; };
 		CE0ABF1B22E1A7CB008C4E2F /* Temp.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1922E1A7C8008C4E2F /* Temp.m */; };
 		CE0ABF1C22E1A7CB008C4E2F /* Sys.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1D22E1A7C8008C4E2F /* Sys.m */; };
@@ -118,9 +116,9 @@
 		CE0AC04C22E1A898008C4E2F /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC03722E1A897008C4E2F /* POPLayerExtras.mm */; };
 		CE0AC04D22E1A898008C4E2F /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC03822E1A898008C4E2F /* POPVector.mm */; };
 		CE0AC05122E1A941008C4E2F /* WeatherNumberMeaningTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC04F22E1A941008C4E2F /* WeatherNumberMeaningTransform.m */; };
-		CE0AC24422E1ABBA008C4E2F /* YoCelsiusNetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24022E1ABBA008C4E2F /* YoCelsiusNetworkingInfo.m */; };
-		CE0AC24522E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24222E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.m */; };
-		CE0AC24622E1ABBA008C4E2F /* Networking+YoCelsius.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24322E1ABBA008C4E2F /* Networking+YoCelsius.m */; };
+		CE0AC24422E1ABBA008C4E2F /* CBNetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24022E1ABBA008C4E2F /* CBNetworkingInfo.m */; };
+		CE0AC24522E1ABBA008C4E2F /* CBRequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24222E1ABBA008C4E2F /* CBRequestParameterSerializer.m */; };
+		CE0AC24622E1ABBA008C4E2F /* Networking+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24322E1ABBA008C4E2F /* Networking+CB.m */; };
 		CE0AC25222E1ABDE008C4E2F /* ResponseDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24822E1ABDD008C4E2F /* ResponseDataSerializer.m */; };
 		CE0AC25322E1ABDE008C4E2F /* RequestParameterSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24A22E1ABDE008C4E2F /* RequestParameterSerializer.m */; };
 		CE0AC25422E1ABDE008C4E2F /* ResponseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC24B22E1ABDE008C4E2F /* ResponseDataManager.m */; };
@@ -151,22 +149,23 @@
 		CE0AC2A122E1AC6F008C4E2F /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC29822E1AC6F008C4E2F /* AFImageDownloader.m */; };
 		CE0AC2AD22E1AF7E008C4E2F /* CGRectStoreValue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC2AC22E1AF7E008C4E2F /* CGRectStoreValue.m */; };
 		CE0AC2B322E1C7E8008C4E2F /* GetWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC2B122E1C7E8008C4E2F /* GetWeatherData.m */; };
-		CE0AC2B922E1C81D008C4E2F /* PresentingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC2B622E1C81C008C4E2F /* PresentingAnimator.m */; };
-		CE0AC2BA22E1C81D008C4E2F /* DismissingAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC2B822E1C81D008C4E2F /* DismissingAnimator.m */; };
 		CE0AC2BB22E1E066008C4E2F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A922E1AF41008C4E2F /* Lato-Bold.ttf */; };
 		CE0AC2BC22E1E07A008C4E2F /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A322E1AF41008C4E2F /* Lato-Light.ttf */; };
 		CE0AC2BD22E1E07A008C4E2F /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A422E1AF41008C4E2F /* Lato-Regular.ttf */; };
 		CE0AC2BE22E1E07A008C4E2F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A522E1AF41008C4E2F /* Lato-Thin.ttf */; };
 		CE0AC2BF22E1E07A008C4E2F /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A722E1AF41008C4E2F /* Lato-ThinItalic.ttf */; };
 		CE0AC2C022E1E07A008C4E2F /* Weather&Time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE0AC2A622E1AF41008C4E2F /* Weather&Time.ttf */; };
+		CE0AC2C422E55C3D008C4E2F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AC2C322E55C3D008C4E2F /* SearchViewController.m */; };
+		CE0AC2C622E6DA01008C4E2F /* CBEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1122E1A7C8008C4E2F /* CBEasing.m */; };
+		CE0AC2C722E6DA08008C4E2F /* Easing.c in Sources */ = {isa = PBXBuildFile; fileRef = CE0ABD1222E1A7C8008C4E2F /* Easing.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE0ABCEB22E1A274008C4E2F /* iWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0ABCEE22E1A274008C4E2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE0ABCEF22E1A274008C4E2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE0ABCF122E1A274008C4E2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE0ABCF222E1A274008C4E2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE0ABCF122E1A274008C4E2F /* IndexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		CE0ABCF222E1A274008C4E2F /* IndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		CE0ABCF722E1A276008C4E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0ABCFA22E1A276008C4E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0ABCFC22E1A276008C4E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,9 +175,9 @@
 		CE0ABD0B22E1A79C008C4E2F /* ForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForecastController.h; sourceTree = "<group>"; };
 		CE0ABD0C22E1A79C008C4E2F /* ForecastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForecastCell.m; sourceTree = "<group>"; };
 		CE0ABD1022E1A7C8008C4E2F /* Easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Easing.h; sourceTree = "<group>"; };
-		CE0ABD1122E1A7C8008C4E2F /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
+		CE0ABD1122E1A7C8008C4E2F /* CBEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEasing.m; sourceTree = "<group>"; };
 		CE0ABD1222E1A7C8008C4E2F /* Easing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Easing.c; sourceTree = "<group>"; };
-		CE0ABD1322E1A7C8008C4E2F /* YXEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXEasing.h; sourceTree = "<group>"; };
+		CE0ABD1322E1A7C8008C4E2F /* CBEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEasing.h; sourceTree = "<group>"; };
 		CE0ABD1522E1A7C8008C4E2F /* FontInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontInfomation.m; sourceTree = "<group>"; };
 		CE0ABD1622E1A7C8008C4E2F /* FontInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontInfomation.h; sourceTree = "<group>"; };
 		CE0ABD1822E1A7C8008C4E2F /* WeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherInfo.h; sourceTree = "<group>"; };
@@ -401,12 +400,12 @@
 		CE0AC03B22E1A898008C4E2F /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
 		CE0AC04F22E1A941008C4E2F /* WeatherNumberMeaningTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherNumberMeaningTransform.m; sourceTree = "<group>"; };
 		CE0AC05022E1A941008C4E2F /* WeatherNumberMeaningTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherNumberMeaningTransform.h; sourceTree = "<group>"; };
-		CE0AC23E22E1ABB9008C4E2F /* Networking+YoCelsius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Networking+YoCelsius.h"; sourceTree = "<group>"; };
-		CE0AC23F22E1ABB9008C4E2F /* YoCelsiusNetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoCelsiusNetworkingInfo.h; sourceTree = "<group>"; };
-		CE0AC24022E1ABBA008C4E2F /* YoCelsiusNetworkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoCelsiusNetworkingInfo.m; sourceTree = "<group>"; };
-		CE0AC24122E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoCelsiusRequestParameterSerializer.h; sourceTree = "<group>"; };
-		CE0AC24222E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoCelsiusRequestParameterSerializer.m; sourceTree = "<group>"; };
-		CE0AC24322E1ABBA008C4E2F /* Networking+YoCelsius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Networking+YoCelsius.m"; sourceTree = "<group>"; };
+		CE0AC23E22E1ABB9008C4E2F /* Networking+CB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Networking+CB.h"; sourceTree = "<group>"; };
+		CE0AC23F22E1ABB9008C4E2F /* CBNetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNetworkingInfo.h; sourceTree = "<group>"; };
+		CE0AC24022E1ABBA008C4E2F /* CBNetworkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNetworkingInfo.m; sourceTree = "<group>"; };
+		CE0AC24122E1ABBA008C4E2F /* CBRequestParameterSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRequestParameterSerializer.h; sourceTree = "<group>"; };
+		CE0AC24222E1ABBA008C4E2F /* CBRequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRequestParameterSerializer.m; sourceTree = "<group>"; };
+		CE0AC24322E1ABBA008C4E2F /* Networking+CB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Networking+CB.m"; sourceTree = "<group>"; };
 		CE0AC24822E1ABDD008C4E2F /* ResponseDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseDataSerializer.m; sourceTree = "<group>"; };
 		CE0AC24922E1ABDE008C4E2F /* ResponseDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseDataSerializer.h; sourceTree = "<group>"; };
 		CE0AC24A22E1ABDE008C4E2F /* RequestParameterSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestParameterSerializer.m; sourceTree = "<group>"; };
@@ -483,6 +482,8 @@
 		CE0AC2B622E1C81C008C4E2F /* PresentingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimator.m; sourceTree = "<group>"; };
 		CE0AC2B722E1C81C008C4E2F /* DismissingAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissingAnimator.h; sourceTree = "<group>"; };
 		CE0AC2B822E1C81D008C4E2F /* DismissingAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimator.m; sourceTree = "<group>"; };
+		CE0AC2C222E55C3D008C4E2F /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CE0AC2C322E55C3D008C4E2F /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,8 +536,8 @@
 				CE0ABF0E22E1A7CB008C4E2F /* RichText */,
 				CE0ABE9522E1A7CA008C4E2F /* SetRect */,
 				CE0ABE9222E1A7CA008C4E2F /* StringHeightAndWidth */,
-				CE0ABD0F22E1A7C8008C4E2F /* YXEasing */,
-				CE0ABE8822E1A7CA008C4E2F /* YXGCD */,
+				CE0ABD0F22E1A7C8008C4E2F /* CBEasing */,
+				CE0ABE8822E1A7CA008C4E2F /* CBGCD */,
 				CE0ABD0522E1A69F008C4E2F /* Supporting Files */,
 			);
 			path = iWeather;
@@ -558,6 +559,7 @@
 		CE0ABD0622E1A6D3008C4E2F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE0AC2C122E55C0E008C4E2F /* searchViewController */,
 				CE0ABD0822E1A77F008C4E2F /* ForecastController */,
 				CE0ABD0722E1A715008C4E2F /* IndexViewController */,
 			);
@@ -567,8 +569,8 @@
 		CE0ABD0722E1A715008C4E2F /* IndexViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE0ABCF122E1A274008C4E2F /* ViewController.h */,
-				CE0ABCF222E1A274008C4E2F /* ViewController.m */,
+				CE0ABCF122E1A274008C4E2F /* IndexViewController.h */,
+				CE0ABCF222E1A274008C4E2F /* IndexViewController.m */,
 			);
 			path = IndexViewController;
 			sourceTree = "<group>";
@@ -584,15 +586,15 @@
 			path = ForecastController;
 			sourceTree = "<group>";
 		};
-		CE0ABD0F22E1A7C8008C4E2F /* YXEasing */ = {
+		CE0ABD0F22E1A7C8008C4E2F /* CBEasing */ = {
 			isa = PBXGroup;
 			children = (
-				CE0ABD1022E1A7C8008C4E2F /* Easing.h */,
-				CE0ABD1122E1A7C8008C4E2F /* YXEasing.m */,
 				CE0ABD1222E1A7C8008C4E2F /* Easing.c */,
-				CE0ABD1322E1A7C8008C4E2F /* YXEasing.h */,
+				CE0ABD1022E1A7C8008C4E2F /* Easing.h */,
+				CE0ABD1322E1A7C8008C4E2F /* CBEasing.h */,
+				CE0ABD1122E1A7C8008C4E2F /* CBEasing.m */,
 			);
-			path = YXEasing;
+			path = CBEasing;
 			sourceTree = "<group>";
 		};
 		CE0ABD1422E1A7C8008C4E2F /* FontInfomation */ = {
@@ -654,7 +656,7 @@
 			path = File;
 			sourceTree = "<group>";
 		};
-		CE0ABE8822E1A7CA008C4E2F /* YXGCD */ = {
+		CE0ABE8822E1A7CA008C4E2F /* CBGCD */ = {
 			isa = PBXGroup;
 			children = (
 				CE0ABE8D22E1A7CA008C4E2F /* GCD.h */,
@@ -667,7 +669,7 @@
 				CE0ABE9122E1A7CA008C4E2F /* GCDTimer.h */,
 				CE0ABE8B22E1A7CA008C4E2F /* GCDTimer.m */,
 			);
-			path = YXGCD;
+			path = CBGCD;
 			sourceTree = "<group>";
 		};
 		CE0ABE9222E1A7CA008C4E2F /* StringHeightAndWidth */ = {
@@ -931,12 +933,12 @@
 		CE0AC23D22E1AB8D008C4E2F /* Networking+CB */ = {
 			isa = PBXGroup;
 			children = (
-				CE0AC23E22E1ABB9008C4E2F /* Networking+YoCelsius.h */,
-				CE0AC24322E1ABBA008C4E2F /* Networking+YoCelsius.m */,
-				CE0AC23F22E1ABB9008C4E2F /* YoCelsiusNetworkingInfo.h */,
-				CE0AC24022E1ABBA008C4E2F /* YoCelsiusNetworkingInfo.m */,
-				CE0AC24122E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.h */,
-				CE0AC24222E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.m */,
+				CE0AC23E22E1ABB9008C4E2F /* Networking+CB.h */,
+				CE0AC24322E1ABBA008C4E2F /* Networking+CB.m */,
+				CE0AC23F22E1ABB9008C4E2F /* CBNetworkingInfo.h */,
+				CE0AC24022E1ABBA008C4E2F /* CBNetworkingInfo.m */,
+				CE0AC24122E1ABBA008C4E2F /* CBRequestParameterSerializer.h */,
+				CE0AC24222E1ABBA008C4E2F /* CBRequestParameterSerializer.m */,
 			);
 			path = "Networking+CB";
 			sourceTree = "<group>";
@@ -1071,6 +1073,15 @@
 			path = Animator;
 			sourceTree = "<group>";
 		};
+		CE0AC2C122E55C0E008C4E2F /* searchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AC2C222E55C3D008C4E2F /* SearchViewController.h */,
+				CE0AC2C322E55C3D008C4E2F /* SearchViewController.m */,
+			);
+			path = searchViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1154,7 +1165,7 @@
 				CE0AC04622E1A898008C4E2F /* POPBasicAnimation.mm in Sources */,
 				CE0ABFF022E1A7CC008C4E2F /* TitleMoveLabel.m in Sources */,
 				CE0AC04522E1A898008C4E2F /* POPGeometry.mm in Sources */,
-				CE0ABCF322E1A274008C4E2F /* ViewController.m in Sources */,
+				CE0ABCF322E1A274008C4E2F /* IndexViewController.m in Sources */,
 				CE0ABFD222E1A7CB008C4E2F /* RotatedAngleView.m in Sources */,
 				CE0ABF2622E1A7CB008C4E2F /* Coord.m in Sources */,
 				CE0ABFC922E1A7CB008C4E2F /* TemperatureCount.m in Sources */,
@@ -1166,11 +1177,11 @@
 				CE0AC04022E1A898008C4E2F /* POPAnimationTracer.mm in Sources */,
 				CE0AC00522E1A7CC008C4E2F /* ARCGPathFromString.m in Sources */,
 				CE0ABFD022E1A7CB008C4E2F /* FailedLongPressView.m in Sources */,
-				CE0AC2BA22E1C81D008C4E2F /* DismissingAnimator.m in Sources */,
 				CE0ABF1D22E1A7CB008C4E2F /* Wind.m in Sources */,
 				CE0ABF2022E1A7CB008C4E2F /* CurrentWeatherData.m in Sources */,
+				CE0AC2C722E6DA08008C4E2F /* Easing.c in Sources */,
 				CE0ABFDF22E1A7CB008C4E2F /* Sun.m in Sources */,
-				CE0AC24422E1ABBA008C4E2F /* YoCelsiusNetworkingInfo.m in Sources */,
+				CE0AC24422E1ABBA008C4E2F /* CBNetworkingInfo.m in Sources */,
 				CE0ABFE822E1A7CC008C4E2F /* EmitterLayerView.m in Sources */,
 				CE0AC28122E1AC65008C4E2F /* AFURLRequestSerialization.m in Sources */,
 				CE0ABFC522E1A7CB008C4E2F /* GCDSemaphore.m in Sources */,
@@ -1190,13 +1201,11 @@
 				CE0AC26C22E1AC05008C4E2F /* RequestMethodType.m in Sources */,
 				CE0AC2A022E1AC6F008C4E2F /* AFAutoPurgingImageCache.m in Sources */,
 				CE0AC04222E1A898008C4E2F /* POPDecayAnimation.mm in Sources */,
-				CE0ABF1922E1A7CB008C4E2F /* Easing.c in Sources */,
 				CE0ABFF322E1A7CC008C4E2F /* WeatherIconView.m in Sources */,
 				CE0ABFFA22E1A7CC008C4E2F /* HumidityView.m in Sources */,
 				CE0ABF1F22E1A7CB008C4E2F /* Weather.m in Sources */,
 				CE0AC25522E1ABDE008C4E2F /* NetworkingInfo.m in Sources */,
 				CE0AC25622E1ABDE008C4E2F /* Networking.m in Sources */,
-				CE0ABF1822E1A7CB008C4E2F /* YXEasing.m in Sources */,
 				CE0AC04922E1A898008C4E2F /* POPAnimatableProperty.mm in Sources */,
 				CE0ABFF922E1A7CC008C4E2F /* CALayer+MaskLayer.m in Sources */,
 				CE0ABFF122E1A7CC008C4E2F /* LeftToRightView.m in Sources */,
@@ -1206,8 +1215,9 @@
 				CE0ABFD722E1A7CB008C4E2F /* SunsetView.m in Sources */,
 				CE0AC26E22E1AC05008C4E2F /* AbsNetworkingIndicator.m in Sources */,
 				CE0ABFEE22E1A7CC008C4E2F /* SnowView.m in Sources */,
-				CE0AC24622E1ABBA008C4E2F /* Networking+YoCelsius.m in Sources */,
+				CE0AC24622E1ABBA008C4E2F /* Networking+CB.m in Sources */,
 				CE0ABF1B22E1A7CB008C4E2F /* Temp.m in Sources */,
+				CE0AC2C422E55C3D008C4E2F /* SearchViewController.m in Sources */,
 				CE0ABF2422E1A7CB008C4E2F /* Clouds.m in Sources */,
 				CE0ABFC622E1A7CB008C4E2F /* NSString+StringHeight.m in Sources */,
 				CE0AC29F22E1AC6F008C4E2F /* UIWebView+AFNetworking.m in Sources */,
@@ -1230,7 +1240,6 @@
 				CE0AC28022E1AC65008C4E2F /* AFURLSessionManager.m in Sources */,
 				CE0ABFC822E1A7CB008C4E2F /* MapManager.m in Sources */,
 				CE0ABD0D22E1A79C008C4E2F /* ForecastController.m in Sources */,
-				CE0AC2B922E1C81D008C4E2F /* PresentingAnimator.m in Sources */,
 				CE0ABFE122E1A7CB008C4E2F /* RainView.m in Sources */,
 				CE0ABFDC22E1A7CB008C4E2F /* SunriseView.m in Sources */,
 				CE0ABFFE22E1A7CC008C4E2F /* TapTitleView.m in Sources */,
@@ -1266,7 +1275,7 @@
 				CE0ABFF622E1A7CC008C4E2F /* UpdatingView.m in Sources */,
 				CE0ABD0E22E1A79C008C4E2F /* ForecastCell.m in Sources */,
 				CE0AC27F22E1AC65008C4E2F /* AFHTTPSessionManager.m in Sources */,
-				CE0AC24522E1ABBA008C4E2F /* YoCelsiusRequestParameterSerializer.m in Sources */,
+				CE0AC24522E1ABBA008C4E2F /* CBRequestParameterSerializer.m in Sources */,
 				CE0AC03D22E1A898008C4E2F /* POPMath.mm in Sources */,
 				CE0AC04B22E1A898008C4E2F /* POPAnimationEvent.mm in Sources */,
 				CE0AC29922E1AC6F008C4E2F /* UIProgressView+AFNetworking.m in Sources */,
@@ -1274,6 +1283,7 @@
 				CE0AC00022E1A7CC008C4E2F /* MaxTempCountLabel.m in Sources */,
 				CE0AC26D22E1AC05008C4E2F /* RequestBodyType.m in Sources */,
 				CE0ABFDB22E1A7CB008C4E2F /* WindSpeedCount.m in Sources */,
+				CE0AC2C622E6DA01008C4E2F /* CBEasing.m in Sources */,
 				CE0AC25222E1ABDE008C4E2F /* ResponseDataSerializer.m in Sources */,
 				CE0AC05122E1A941008C4E2F /* WeatherNumberMeaningTransform.m in Sources */,
 				CE0AC03E22E1A898008C4E2F /* POPSpringAnimation.mm in Sources */,
@@ -1423,7 +1433,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R7S59CFWR3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -1435,6 +1446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.efun.iWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = iWeather;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1443,7 +1455,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = R7S59CFWR3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -1455,6 +1468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.efun.iWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = iWeather;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

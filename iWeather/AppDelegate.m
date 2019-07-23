@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "IndexViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
     // Init window.
     self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor    = [UIColor whiteColor];
-    self.window.rootViewController = [ViewController new];
+    self.window.rootViewController = [IndexViewController new];
     [self.window makeKeyAndVisible];
     
     // Hide statusBar.

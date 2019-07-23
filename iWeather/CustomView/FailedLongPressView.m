@@ -1,8 +1,8 @@
 //
 //  FailedLongPressView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/3/10.
+//  Created by crazyball on 15/3/10.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

@@ -1,9 +1,9 @@
 //
 //  CGRectStoreValue.m
-//  YoCelsius
+//  iWeather
 //
 //  Created by YouXianMing on 15/12/17.
-//  Copyright © 2015年 XianMingYou. All rights reserved.
+//  Copyright © 2015年 crazyball. All rights reserved.
 //
 
 #import "CGRectStoreValue.h"

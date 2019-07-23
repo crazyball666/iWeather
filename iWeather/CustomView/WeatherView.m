@@ -1,8 +1,8 @@
 //
 //  WeatherView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/23.
+//  Created by crazyball on 15/2/23.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -22,7 +22,7 @@
 #import "UpToDownView.h"
 #import "ShapeWordView.h"
 
-@interface WeatherView ()<UITableViewDelegate>
+@interface WeatherView ()<UITableViewDelegate,CityTitleViewDelegate>
 
 @property (nonatomic, strong) ChangeColorLabel  *changeColorLabel;
 @property (nonatomic ,strong) HumidityView      *humidityView;
@@ -153,6 +153,7 @@
 
     self.cityTitleView = [[CityTitleView alloc] initWithFrame:rectCityTitleView];
     [self.cityTitleView buildView];
+    self.cityTitleView.delegate = self;
     [self.tableView addSubview:self.cityTitleView];
     
     // 显示进入更多天气的view的提示信息
@@ -329,4 +330,9 @@
     }
 }
 
+- (void)didTapCityBtn:(UIButton *)btn{
+    if (_delegate && [_delegate respondsToSelector:@selector(didTapCityBtn:)]) {
+        [_delegate didTapCityBtn:btn];
+    }
+}
 @end

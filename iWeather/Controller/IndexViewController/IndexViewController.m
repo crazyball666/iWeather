@@ -6,7 +6,7 @@
 //  Copyright © 2019 EFN. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "IndexViewController.h"
 #import "MapManager.h"
 #import "WeatherView.h"
 #import "SearchView.h"
@@ -14,14 +14,13 @@
 #import "CurrentConditions.h"
 #import "GetWeatherData.h"
 #import "ForecastController.h"
-#import "PresentingAnimator.h"
-#import "DismissingAnimator.h"
 #import "UpdatingView.h"
 #import "FadeBlackView.h"
 #import "FailedLongPressView.h"
 #import "TWMessageBarManager.h"
+#import "SearchViewController.h"
 
-@interface ViewController ()<MapManagerLocationDelegate, UITableViewDelegate, GetWeatherDataDelegate, WeatherViewDelegate, UIViewControllerTransitioningDelegate, FailedLongPressViewDelegate>
+@interface IndexViewController ()<MapManagerLocationDelegate, UITableViewDelegate, GetWeatherDataDelegate, WeatherViewDelegate, UIViewControllerTransitioningDelegate, FailedLongPressViewDelegate>
 
 @property (nonatomic, strong) MapManager           *mapLoacation;
 @property (nonatomic, strong) WeatherView          *weatherView;
@@ -33,7 +32,7 @@
 
 @end
 
-@implementation ViewController
+@implementation IndexViewController
 
 - (void)viewDidLoad {
     
@@ -47,6 +46,15 @@
     self.weatherView.delegate            = self;
     [self.weatherView buildView];
     [self.view addSubview:self.weatherView];
+    
+//    UIButton *searchBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [searchBtn setTitle:@"Search" forState:UIControlStateNormal];
+//    [searchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    searchBtn.frame = CGRectMake(Width-100, 20, 100, 50);
+//    searchBtn.backgroundColor = [UIColor yellowColor];
+//    [searchBtn addTarget:self action:@selector(didTapSearchBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:searchBtn];
+    
     
     // 变黑
     self.fadeBlackView = [[FadeBlackView alloc] initWithFrame:CGRectZero];
@@ -245,18 +253,18 @@
     [self getLocationAndFadeShow];
 }
 
-#pragma mark - 定制转场动画
-
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
-                                                                   presentingController:(UIViewController *)presenting
-                                                                       sourceController:(UIViewController *)source {
-    
-    return [PresentingAnimator new];
+- (void)didTapCityBtn:(UIButton *)btn{
+    SearchViewController *searchVC = [[SearchViewController alloc]init];
+    searchVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:searchVC animated:YES completion:nil];
 }
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    
-    return [DismissingAnimator new];
+
+- (void)updateWeatherWithLocation:(CLLocation *)location{
+    // 显示出等待页面
+    [self.fadeBlackView show];
+    [self.upDatingView show];
+    [self performSelector:@selector(delayRunEvent:) withObject:location afterDelay:0.3f];
 }
 
 @end

@@ -455,11 +455,11 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
 	if (self == [TWMessageView class])
 	{
         // Fonts
-        kTWMessageViewTitleFont       = [UIFont fontWithName:LATO_LIGHT size:18];
-        kTWMessageViewDescriptionFont = [UIFont fontWithName:LATO_LIGHT size:16];
+        kTWMessageViewTitleFont       = [UIFont fontWithName:LATO_BOLD size:16];
+        kTWMessageViewDescriptionFont = [UIFont fontWithName:LATO_BOLD size:12];
         
         // Colors
-        kTWMessageViewTitleColor = [UIColor redColor];
+        kTWMessageViewTitleColor = [UIColor whiteColor];
         kTWMessageViewDescriptionColor = [UIColor colorWithWhite:1.0 alpha:1.0];
 	}
 }
@@ -530,6 +530,7 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         
         CGFloat xOffset = kTWMessageViewBarPadding;
         CGFloat yOffset = kTWMessageViewBarPadding + [self statusBarOffset];
+        if(iPhoneXSeries) yOffset += StatusBarDelta;
         
         // icon
         CGContextSaveGState(context);
@@ -550,6 +551,7 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         if (self.titleString && !self.descriptionString)
         {
             yOffset = ceil(rect.size.height * 0.5) - ceil(titleLabelSize.height * 0.5) - kTWMessageViewTextOffset;
+            if(iPhoneXSeries) yOffset += StatusBarDelta;
         }
         
         if ([[UIDevice currentDevice] isRunningiOS7OrLater])
@@ -596,7 +598,11 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
 {
     CGSize titleLabelSize = [self titleSize];
     CGSize descriptionLabelSize = [self descriptionSize];
-    return MAX((kTWMessageViewBarPadding * 2) + titleLabelSize.height + descriptionLabelSize.height + [self statusBarOffset], (kTWMessageViewBarPadding * 2) + kTWMessageViewIconSize + [self statusBarOffset]);
+    CGFloat height = MAX((kTWMessageViewBarPadding * 2) + titleLabelSize.height + descriptionLabelSize.height + [self statusBarOffset], (kTWMessageViewBarPadding * 2) + kTWMessageViewIconSize + [self statusBarOffset]);
+    if(iPhoneXSeries){
+        height += StatusBarDelta;
+    }
+    return height;
 }
 
 - (CGFloat)width
@@ -749,7 +755,7 @@ static UIColor *kTWDefaultMessageBarStyleSheetInfoStrokeColor = nil;
         // Colors (background)
         kTWDefaultMessageBarStyleSheetErrorBackgroundColor = [UIColor blackColor]; // orange
         kTWDefaultMessageBarStyleSheetSuccessBackgroundColor = [UIColor colorWithRed:0.0f green:0.831f blue:0.176f alpha:kTWMessageBarStyleSheetMessageBarAlpha]; // green
-        kTWDefaultMessageBarStyleSheetInfoBackgroundColor = [UIColor colorWithRed:0.0 green:0.482 blue:1.0 alpha:kTWMessageBarStyleSheetMessageBarAlpha]; // blue
+        kTWDefaultMessageBarStyleSheetInfoBackgroundColor = [UIColor colorWithRed:0.3 green:0.4 blue:0.9 alpha:1]; // blue
         
         // Colors (stroke)
         kTWDefaultMessageBarStyleSheetErrorStrokeColor = [UIColor blackColor]; // orange

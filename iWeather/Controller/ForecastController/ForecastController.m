@@ -1,8 +1,8 @@
 //
 //  ForecastController.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/26.
+//  Created by crazyball on 15/2/26.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

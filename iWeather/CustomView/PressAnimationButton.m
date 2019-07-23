@@ -2,7 +2,7 @@
 //  PressAnimationButton.m
 //  Button
 //
-//  Created by XianMingYou on 15/1/30.
+//  Created by crazyball on 15/1/30.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

@@ -1,8 +1,8 @@
 //
 //  CityTitleView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/24.
+//  Created by crazyball on 15/2/24.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UILabel          *baseLabel;       // 基站label
 @property (nonatomic, strong) CGRectStoreValue *baseLabelStoreValue;
 
-@property (nonatomic, strong) UILabel          *cityNameLabel;   // 城市名字label
+@property (nonatomic, strong) UIButton          *cityNameBtn;   // 城市名字label
 @property (nonatomic, strong) CGRectStoreValue *cityNameLabelStoreValue;
 
 @property (nonatomic, strong) UILabel          *weatherDesLabel; // 天气描述label
@@ -244,41 +244,33 @@
     self.updateHourLabel.alpha = 0.f;
     
     // 城市label
+    self.cityNameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.cityNameBtn addTarget:self action:@selector(didTapCityBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.cityNameBtn setTitle:@"San Francisco" forState:UIControlStateNormal];
+    [self.cityNameBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     if (iPhone4_4s || iPhone5_5s) {
-        
-        self.cityNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 16, Width - 10, 40)];
-        self.cityNameLabel.text = @"San Francisco";
-        self.cityNameLabel.font = [UIFont fontWithName:LATO_REGULAR size:26.f];
+        self.cityNameBtn.titleLabel.font = [UIFont fontWithName:LATO_REGULAR size:26.f];
 
     } else if (iPhone6_6s) {
-        
-        self.cityNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 17, Width - 10, 40)];
-        self.cityNameLabel.text = @"San Francisco";
-        self.cityNameLabel.font = [UIFont fontWithName:LATO_LIGHT size:30.f];
+        self.cityNameBtn.titleLabel.font = [UIFont fontWithName:LATO_LIGHT size:30.f];
         
     } else if (iPhone6_6sPlus) {
-        
-        self.cityNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 17, Width - 10, 40)];
-        self.cityNameLabel.text = @"San Francisco";
-        self.cityNameLabel.font = [UIFont fontWithName:LATO_LIGHT size:30.f];
+        self.cityNameBtn.titleLabel.font = [UIFont fontWithName:LATO_LIGHT size:30.f];
         
     } else {
-        
-        self.cityNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 16, Width - 10, 40)];
-        self.cityNameLabel.text = @"San Francisco";
-        self.cityNameLabel.font = [UIFont fontWithName:LATO_REGULAR size:26.f];
+        self.cityNameBtn.titleLabel.font = [UIFont fontWithName:LATO_REGULAR size:26.f];
     }
-    
-    
-    [self addSubview:self.cityNameLabel];
-    [self.cityNameLabel sizeToFit];
-    self.cityNameLabel.width = Width - 10;
+    CGSize size = [self.cityNameBtn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName: self.cityNameBtn.titleLabel.font}];
+    self.cityNameBtn.frame = CGRectMake(15, 17, size.width, size.height);
+    self.cityNameBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    self.cityNameBtn.titleEdgeInsets = UIEdgeInsetsZero;
+    [self addSubview:self.cityNameBtn];
     self.cityNameLabelStoreValue = [CGRectStoreValue new];
-    [self moveToRightWithMidRect:self.cityNameLabel.frame
+    [self moveToRightWithMidRect:self.cityNameBtn.frame
                     moveDistance:5
                   withStoreValue:self.cityNameLabelStoreValue];
-    self.cityNameLabel.frame = self.cityNameLabelStoreValue.startRect;
-    self.cityNameLabel.alpha = 0.f;
+    self.cityNameBtn.frame = self.cityNameLabelStoreValue.startRect;
+    self.cityNameBtn.alpha = 0.f;
     
     // 天气描述用的label
     if (iPhone4_4s || iPhone5_5s) {
@@ -325,14 +317,14 @@
     // 表述类型
     if (type == __RAIN) {
         
-        self.weatherConditionView = [[RainView alloc] initWithFrame:CGRectMake(0, 0, Width / 2.f, Height - Width - Width / 2.f)];
+        self.weatherConditionView = [[RainView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cityNameBtn.frame), Width / 2.f, Height - Width - Width / 2.f)];
         [self.weatherConditionView configType:__RAIN];
         [self.weatherConditionView show];
         [self addSubview:self.weatherConditionView];
         
     } else if (type == __SNOW) {
         
-        self.weatherConditionView = [[SnowView alloc] initWithFrame:CGRectMake(0, 0, Width / 2.f, Height - Width - Width / 2.f)];
+        self.weatherConditionView = [[SnowView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cityNameBtn.frame), Width / 2.f, Height - Width - Width / 2.f)];
         [self.weatherConditionView configType:__SNOW];
         [self.weatherConditionView show];
         [self addSubview:self.weatherConditionView];
@@ -346,8 +338,8 @@
         self.baseLabel.frame = self.baseLabelStoreValue.midRect;
         self.baseLabel.alpha = 1.f;
         
-        self.cityNameLabel.frame = self.cityNameLabelStoreValue.midRect;
-        self.cityNameLabel.alpha = 1.f;
+        self.cityNameBtn.frame = self.cityNameLabelStoreValue.midRect;
+        self.cityNameBtn.alpha = 1.f;
         
         self.weatherDesLabel.frame = self.weatherDesLabelStoreValue.midRect;
         self.weatherDesLabel.alpha = 1.f;
@@ -377,8 +369,8 @@
         self.baseLabel.frame = self.baseLabelStoreValue.endRect;
         self.baseLabel.alpha = 0.f;
         
-        self.cityNameLabel.frame = self.cityNameLabelStoreValue.endRect;
-        self.cityNameLabel.alpha = 0.f;
+        self.cityNameBtn.frame = self.cityNameLabelStoreValue.endRect;
+        self.cityNameBtn.alpha = 0.f;
         
         self.weatherDesLabel.frame = self.weatherDesLabelStoreValue.endRect;
         self.weatherDesLabel.alpha = 0.f;
@@ -399,7 +391,7 @@
         
         self.baseLabel.frame       = self.baseLabelStoreValue.startRect;
         
-        self.cityNameLabel.frame   = self.cityNameLabelStoreValue.startRect;
+        self.cityNameBtn.frame   = self.cityNameLabelStoreValue.startRect;
         
         self.weatherDesLabel.frame = self.weatherDesLabelStoreValue.startRect;
         
@@ -425,8 +417,12 @@
 - (void)setCityName:(NSString *)cityName {
     
     _cityName           = cityName;
-    _cityNameLabel.text = cityName;
-    [_cityNameLabel sizeToFit];
+    if (![cityName isKindOfClass:[NSString class]]) {
+        cityName = @"UNKNOW";
+    }
+    [self.cityNameBtn setTitle:cityName forState:UIControlStateNormal];
+    CGSize size = [cityName sizeWithAttributes:@{NSFontAttributeName: self.cityNameBtn.titleLabel.font}];
+    self.cityNameBtn.frame = CGRectMake(15, 17, size.width, size.height);
 }
 
 - (NSString *)cityName {
@@ -483,5 +479,9 @@
     
     return _utcSec;
 }
-
+- (void)didTapCityBtn:(UIButton *)btn{
+    if (_delegate && [_delegate respondsToSelector:@selector(didTapCityBtn:)]) {
+        [self.delegate didTapCityBtn:btn];
+    }
+}
 @end

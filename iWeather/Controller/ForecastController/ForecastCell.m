@@ -1,8 +1,8 @@
 //
 //  ForecastCell.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/26.
+//  Created by crazyball on 15/2/26.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -30,7 +30,6 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        
         // 初始化标签
         [self initLabels];
     }
@@ -43,34 +42,34 @@
     // 星期几
     if (iPhone4_4s || iPhone5_5s) {
         
-        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(17 + 10, 24, 100, 60)];
+        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, (Width-50)/4, 60)];
         self.weekDayInfoLabel.textAlignment = NSTextAlignmentLeft;
         self.weekDayInfoLabel.font          = [UIFont fontWithName:LATO_THIN size:28.f];
         self.weekDayInfoLabel.text          = @"Today";
         
     } else if (iPhone6_6s) {
         
-        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(17 + 10, 24, 100, 60)];
+        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, (Width-50)/4, 60)];
         self.weekDayInfoLabel.textAlignment = NSTextAlignmentLeft;
         self.weekDayInfoLabel.font          = [UIFont fontWithName:LATO_THIN size:34.f];
         self.weekDayInfoLabel.text          = @"Today";
         
     } else if (iPhone6_6sPlus) {
         
-        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(17 + 10, 24, 100, 60)];
+        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, (Width-50)/4, 60)];
         self.weekDayInfoLabel.textAlignment = NSTextAlignmentLeft;
         self.weekDayInfoLabel.font          = [UIFont fontWithName:LATO_THIN size:40.f];
         self.weekDayInfoLabel.text          = @"Today";
         
     } else {
         
-        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(17 + 10, 24, 100, 60)];
+        self.weekDayInfoLabel               = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, (Width-50)/4, 60)];
         self.weekDayInfoLabel.textAlignment = NSTextAlignmentLeft;
         self.weekDayInfoLabel.font          = [UIFont fontWithName:LATO_THIN size:28.f];
         self.weekDayInfoLabel.text          = @"Today";
     }
     
-    [self.weekDayInfoLabel sizeToFit];
+//    [self.weekDayInfoLabel sizeToFit];
     [self addSubview:self.weekDayInfoLabel];
     
     // 日期
@@ -87,91 +86,91 @@
     // 最低温度
     if (iPhone4_4s || iPhone5_5s) {
         
-        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100, 25, 200, 70)];
-        self.minTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.weekDayInfoLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.minTempLabel.textAlignment = NSTextAlignmentCenter;
         self.minTempLabel.font          = [UIFont fontWithName:LATO_THIN size:28];
         self.minTempLabel.text          = @"-200.0°";
         
     } else if (iPhone6_6s) {
         
-        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(110, 25, 200, 70)];
-        self.minTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.weekDayInfoLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.minTempLabel.textAlignment = NSTextAlignmentCenter;
         self.minTempLabel.font          = [UIFont fontWithName:LATO_THIN size:34];
         self.minTempLabel.text          = @"-200.0°";
         
     } else if (iPhone6_6sPlus) {
         
-        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(120, 25, 200, 70)];
-        self.minTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.weekDayInfoLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.minTempLabel.textAlignment = NSTextAlignmentCenter;
         self.minTempLabel.font          = [UIFont fontWithName:LATO_THIN size:40];
         self.minTempLabel.text          = @"-200.0°";
         
     } else {
         
-        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100, 25, 200, 70)];
-        self.minTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.minTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.weekDayInfoLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.minTempLabel.textAlignment = NSTextAlignmentCenter;
         self.minTempLabel.font          = [UIFont fontWithName:LATO_THIN size:28];
         self.minTempLabel.text          = @"-200.0°";
     }
     
-    [self.minTempLabel sizeToFit];
+//    [self.minTempLabel sizeToFit];
     [self addSubview:self.minTempLabel];
     
     // 最高温度
     if (iPhone4_4s || iPhone5_5s) {
         
-        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100 + 80, 25, 200, 70)];
-        self.maxTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.minTempLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.maxTempLabel.textAlignment = NSTextAlignmentCenter;
         self.maxTempLabel.font          = [UIFont fontWithName:LATO_THIN size:28];
         self.maxTempLabel.text          = @"-200.0°";
         
     } else if (iPhone6_6s) {
         
-        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100 + 80 + 20, 25, 200, 70)];
-        self.maxTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.minTempLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.maxTempLabel.textAlignment = NSTextAlignmentCenter;
         self.maxTempLabel.font          = [UIFont fontWithName:LATO_THIN size:34];
         self.maxTempLabel.text          = @"-200.0°";
         
     } else if (iPhone6_6sPlus) {
         
-        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100 + 80 + 40, 25, 200, 70)];
-        self.maxTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.minTempLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.maxTempLabel.textAlignment = NSTextAlignmentCenter;
         self.maxTempLabel.font          = [UIFont fontWithName:LATO_THIN size:40];
         self.maxTempLabel.text          = @"-200.0°";
         
     } else {
         
-        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(100 + 80, 25, 200, 70)];
-        self.maxTempLabel.textAlignment = NSTextAlignmentLeft;
+        self.maxTempLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.minTempLabel.frame)+10, 15, (Width-50)/4, 60)];
+        self.maxTempLabel.textAlignment = NSTextAlignmentCenter;
         self.maxTempLabel.font          = [UIFont fontWithName:LATO_THIN size:28];
         self.maxTempLabel.text          = @"-200.0°";
     }
     
-    [self.maxTempLabel sizeToFit];
+//    [self.maxTempLabel sizeToFit];
     [self addSubview:self.maxTempLabel];
     
     // 天气图标
     if (iPhone4_4s || iPhone5_5s) {
         
-        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(250, 15, 60, 60)];
+        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.maxTempLabel.frame)+10, 15, (Width-50)/4, 60)];
         self.weatherLabel.textAlignment = NSTextAlignmentCenter;
         self.weatherLabel.font          = [UIFont fontWithName:WEATHER_TIME size:40.f];
         
     } else if (iPhone6_6s) {
         
-        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(250 + 40, 20, 60, 60)];
+        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.maxTempLabel.frame)+10, 15, (Width-50)/4, 60)];
         self.weatherLabel.textAlignment = NSTextAlignmentCenter;
         self.weatherLabel.font          = [UIFont fontWithName:WEATHER_TIME size:45.f];
         
     } else if (iPhone6_6sPlus) {
         
-        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(250 + 70, 24, 60, 60)];
+        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.maxTempLabel.frame)+10, 15, (Width-50)/4, 60)];
         self.weatherLabel.textAlignment = NSTextAlignmentCenter;
         self.weatherLabel.font          = [UIFont fontWithName:WEATHER_TIME size:50.f];
         
     } else {
         
-        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(250, 15, 60, 60)];
+        self.weatherLabel               = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.maxTempLabel.frame)+10, 15, (Width-50)/4, 60)];
         self.weatherLabel.textAlignment = NSTextAlignmentCenter;
         self.weatherLabel.font          = [UIFont fontWithName:WEATHER_TIME size:40.f];
         
@@ -190,6 +189,17 @@
     line.backgroundColor = [UIColor blackColor];
     line.alpha           = 0.1;
     [self addSubview:line];
+    
+    self.weekDayInfoLabel.x += 50;
+    self.weekDayInfoLabel.alpha = 0;
+    self.minTempLabel.x += 50;
+    self.minTempLabel.alpha = 0;
+    self.maxTempLabel.x += 50;
+    self.minTempLabel.alpha = 0;
+    self.weatherLabel.x += 50;
+    self.weatherLabel.alpha = 0;
+    self.weatherInfoLabel.x += 50;
+    self.weatherInfoLabel.alpha = 0;
 }
 
 - (void)acccessData:(id)data indexPath:(NSIndexPath *)indexPath {
@@ -239,10 +249,17 @@
  *  显示
  */
 - (void)show {
-    
     [UIView animateWithDuration:0.5 animations:^{
-        
-        self.weekDayInfoLabel.x = 17;
+        self.weekDayInfoLabel.x -= 50;
+        self.weekDayInfoLabel.alpha = 1;
+        self.minTempLabel.x -= 50;
+        self.minTempLabel.alpha = 1;
+        self.maxTempLabel.x -= 50;
+        self.minTempLabel.alpha = 1;
+        self.weatherInfoLabel.x -= 50;
+        self.weatherInfoLabel.alpha = 1;
+        self.weatherLabel.x -= 50;
+        self.weatherLabel.alpha = 1;
     }];
 }
 
@@ -250,8 +267,16 @@
  *  隐藏
  */
 - (void)hide {
-    
-    self.weekDayInfoLabel.x = 17 + 10;
+    self.weekDayInfoLabel.x += 50;
+    self.weekDayInfoLabel.alpha = 0;
+    self.minTempLabel.x += 50;
+    self.minTempLabel.alpha = 0;
+    self.maxTempLabel.x += 50;
+    self.minTempLabel.alpha = 0;
+    self.weatherInfoLabel.x += 50;
+    self.weatherInfoLabel.alpha = 0;
+    self.weatherLabel.x += 50;
+    self.weatherLabel.alpha = 0;
 }
 
 @end

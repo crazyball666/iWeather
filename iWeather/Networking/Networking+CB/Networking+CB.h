@@ -1,9 +1,9 @@
 //
-//  Networking+YoCelsius.h
-//  YoCelsius
+//  Networking+CB.h
+//  iWeather
 //
 //  Created by YouXianMing on 2017/11/8.
-//  Copyright © 2017年 XianMingYou. All rights reserved.
+//  Copyright © 2017年 crazyball. All rights reserved.
 //
 
 #import "Networking.h"
@@ -14,6 +14,8 @@ typedef enum : NSUInteger {
     
     kWeather = 1000,
     kForecastDaily,
+    kSeachCity,
+    kCityName
     
 } ENetworkConfigTagValue;
 
@@ -56,7 +58,35 @@ static inline NetworkConfig *forecastDaily() {
     return config;
 }
 
-@interface Networking (YoCelsius)
+/**
+  * [GET] Search City
+  */
+static inline NetworkConfig *searchCity() {
+    
+    NetworkConfig *config = [NetworkConfig new];
+    config.urlString      = @"https://restapi.amap.com/v3/geocode/geo";
+    config.functionName   = @"Search City.";
+    config.tag            = kSeachCity;
+    config.method         = kNetworkingGET;
+    
+    return config;
+}
+
+/**
+ * [GET]  City Name
+ */
+static inline NetworkConfig *cityName() {
+    
+    NetworkConfig *config = [NetworkConfig new];
+    config.urlString      = @"https://restapi.amap.com/v3/geocode/regeo";
+    config.functionName   = @"city Name.";
+    config.tag            = kCityName;
+    config.method         = kNetworkingGET;
+    
+    return config;
+}
+
+@interface Networking (CB)
 
 + (instancetype)networkingWithNetworkConfig:(NetworkConfig *)config requestParameter:(id)requestParameter delegate:(id <NetworkingDelegate>)delegate;
 

@@ -1,8 +1,8 @@
 //
 //  NumberCount.h
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/18.
+//  Created by crazyball on 15/2/18.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

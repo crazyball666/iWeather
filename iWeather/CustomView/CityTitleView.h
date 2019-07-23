@@ -1,8 +1,8 @@
 //
 //  CityTitleView.h
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/24.
+//  Created by crazyball on 15/2/24.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -12,6 +12,12 @@
 #import "SnowView.h"
 #import "RainView.h"
 #import "WeatherNumberMeaningTransform.h"
+
+@protocol CityTitleViewDelegate <NSObject>
+
+- (void)didTapCityBtn:(UIButton *)btn;
+
+@end
 
 @interface CityTitleView : UIView
 
@@ -23,6 +29,7 @@
 @property (nonatomic, strong) NSString       *updateHour;
 @property (nonatomic)         NSTimeInterval  utcSec;
 @property (nonatomic, strong) NSNumber       *weatherNumber;
+@property (nonatomic, weak) id<CityTitleViewDelegate> delegate;
 
 // 创建view
 - (void)buildView;

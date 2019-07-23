@@ -1,27 +1,27 @@
 //
-//  Networking+YoCelsius.m
-//  YoCelsius
+//  Networking+CB.m
+//  iWeather
 //
 //  Created by YouXianMing on 2017/11/8.
-//  Copyright © 2017年 XianMingYou. All rights reserved.
+//  Copyright © 2017年 crazyball. All rights reserved.
 //
 
-#import "Networking+YoCelsius.h"
-#import "YoCelsiusRequestParameterSerializer.h"
-#import "YoCelsiusNetworkingInfo.h"
+#import "Networking+CB.h"
+#import "CBRequestParameterSerializer.h"
+#import "CBNetworkingInfo.h"
 
 @implementation NetworkConfig
 
 @end
 
-@implementation Networking (YoCelsius)
+@implementation Networking (CB)
 
 + (instancetype)networkingWithNetworkConfig:(NetworkConfig *)config requestParameter:(id)requestParameter delegate:(id <NetworkingDelegate>)delegate {
     
     Networking *networking = [Networking networkingWithUrlString:config.urlString
                                                 requestParameter:requestParameter
                                                           method:config.method
-                                      requestParameterSerializer:[YoCelsiusRequestParameterSerializer new]
+                                      requestParameterSerializer:[CBRequestParameterSerializer new]
                                           responseDataSerializer:nil
                                        constructingBodyWithBlock:nil
                                                         progress:nil
@@ -31,7 +31,7 @@
                                               responseSerializer:[AFJSONResponseSerializer serializer]];
     networking.timeoutInterval = @(8.f);
     networking.serviceInfo     = config.functionName;
-    networking.networkingInfo  = [YoCelsiusNetworkingInfo new];
+    networking.networkingInfo  = [CBNetworkingInfo new];
     
     return networking;
 }

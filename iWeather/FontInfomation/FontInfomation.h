@@ -2,7 +2,7 @@
 //  FontInfomation.h
 //  YouXianMing
 //
-//  Created by XianMingYou on 15/2/11.
+//  Created by crazyball on 15/2/11.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

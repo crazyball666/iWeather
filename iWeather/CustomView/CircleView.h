@@ -1,8 +1,8 @@
 //
 //  CircleView.h
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/17.
+//  Created by crazyball on 15/2/17.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

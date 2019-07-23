@@ -1,8 +1,8 @@
 //
 //  MapManager.h
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/15.
+//  Created by crazyball on 15/2/15.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

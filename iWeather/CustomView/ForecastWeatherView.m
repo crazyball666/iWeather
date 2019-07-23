@@ -1,8 +1,8 @@
 //
 //  ForecastWeatherView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/3/4.
+//  Created by crazyball on 15/3/4.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -110,7 +110,9 @@
 @synthesize cityName = _cityName;
 
 - (void)setCityName:(NSString *)cityName {
-    
+    if (![cityName isKindOfClass:[NSString class]]) {
+        cityName = @"UNKNOW";
+    }
     _cityName               = cityName;
     self.cityNameLabel.text = cityName;
     [self.cityNameLabel sizeToFit];

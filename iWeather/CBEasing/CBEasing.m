@@ -5,9 +5,9 @@
 //  Copyright (c) 2014年 Y.X. All rights reserved.
 //
 
-#import "YXEasing.h"
+#import "CBEasing.h"
 
-@implementation YXEasing
+@implementation CBEasing
 
 + (NSArray *)calculateFrameFromValue:(CGFloat)fromValue
                              toValue:(CGFloat)toValue

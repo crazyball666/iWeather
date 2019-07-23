@@ -1,8 +1,8 @@
 //
 //  SearchView.h
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/3/2.
+//  Created by crazyball on 15/3/2.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/

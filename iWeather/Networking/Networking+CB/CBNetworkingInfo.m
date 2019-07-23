@@ -1,14 +1,14 @@
 //
-//  YoCelsiusNetworkingInfo.m
-//  YoCelsius
+//  CBNetworkingInfo.m
+//  iWeather
 //
 //  Created by YouXianMing on 2017/11/13.
-//  Copyright © 2017年 XianMingYou. All rights reserved.
+//  Copyright © 2017年 crazyball. All rights reserved.
 //
 
-#import "YoCelsiusNetworkingInfo.h"
+#import "CBNetworkingInfo.h"
 
-@implementation YoCelsiusNetworkingInfo
+@implementation CBNetworkingInfo
 
 - (void)showMessage {
     

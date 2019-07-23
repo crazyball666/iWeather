@@ -95,7 +95,7 @@ BounceEaseInOut
  
  */
 
-@interface YXEasing : NSObject
+@interface CBEasing : NSObject
 
 // 数组中存储的数据为 NSNumber float 型
 + (NSArray *)calculateFrameFromValue:(CGFloat)fromValue

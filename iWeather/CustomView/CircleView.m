@@ -1,8 +1,8 @@
 //
 //  CircleView.m
-//  YoCelsius
+//  iWeather
 //
-//  Created by XianMingYou on 15/2/17.
+//  Created by crazyball on 15/2/17.
 //
 //  https://github.com/YouXianMing
 //  http://www.cnblogs.com/YouXianMing/
@@ -122,7 +122,7 @@
         keyAnimation.keyPath              = @"strokeEnd";
         keyAnimation.duration             = duration;
         keyAnimation.values               = \
-            [YXEasing calculateFrameFromValue:self.circleLayer.strokeEnd
+            [CBEasing calculateFrameFromValue:self.circleLayer.strokeEnd
                                       toValue:value
                                          func:CubicEaseInOut
                                    frameCount:duration * 30];
@@ -159,7 +159,7 @@
         keyAnimation.keyPath              = @"strokeStart";
         keyAnimation.duration             = duration;
         keyAnimation.values               = \
-        [YXEasing calculateFrameFromValue:self.circleLayer.strokeStart
+        [CBEasing calculateFrameFromValue:self.circleLayer.strokeStart
                                   toValue:value
                                      func:CubicEaseInOut
                                frameCount:duration * 30];

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreLocation;
 
-@interface ViewController : UIViewController
+@interface IndexViewController : UIViewController
 
+- (void)updateWeatherWithLocation:(CLLocation *)location;
 
 @end
 

@@ -1,16 +1,16 @@
 //
-//  YoCelsiusRequestParameterSerializer.m
-//  YoCelsius
+//  CBRequestParameterSerializer.m
+//  iWeather
 //
 //  Created by YouXianMing on 2017/11/8.
-//  Copyright © 2017年 XianMingYou. All rights reserved.
+//  Copyright © 2017年 crazyball. All rights reserved.
 //
 
-#import "YoCelsiusRequestParameterSerializer.h"
+#import "CBRequestParameterSerializer.h"
 
 static NSString *appIdKey = @"8c0e04b52e6da9e67c51a102d6269a60";
 
-@implementation YoCelsiusRequestParameterSerializer
+@implementation CBRequestParameterSerializer
 
 - (id)serializeRequestParameter:(id)requestParameter {
     
